@@ -1,7 +1,8 @@
-package com.dh.animal.controller;
+package com.dh.movie.controller;
 
-import com.dh.animal.dto.AnimalDTO;
-import com.dh.animal.service.AnimalService;
+import com.dh.movie.dto.MovieDTO;
+
+import com.dh.movie.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,18 +12,18 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/")
-public class AnimalController {
+public class MovieController {
 
     @Autowired
-    private AnimalService service;
+    private MovieService service;
 
     @PostMapping
-    private ResponseEntity<AnimalDTO> salvar(@RequestBody AnimalDTO dto) {
+    private ResponseEntity<MovieDTO> salvar(@RequestBody MovieDTO dto) {
         return ResponseEntity.status(HttpStatus.CREATED).body(service.salvar(dto));
     }
 
     @GetMapping("/especie/{id}")
-    private ResponseEntity<List<AnimalDTO>> pesquisarPorIdEspecie(@PathVariable Long id) {
+    private ResponseEntity<List<MovieDTO>> pesquisarPorIdEspecie(@PathVariable Long id) {
         return ResponseEntity.ok(service.pesquisarPorIdEspecie(id));
     }
 

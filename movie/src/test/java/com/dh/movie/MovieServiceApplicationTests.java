@@ -1,10 +1,10 @@
-package com.dh.animal;
+package com.dh.movie;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AnimalServiceApplicationTests {
+class MovieServiceApplicationTests {
 
 	@Test
 	void contextLoads() {

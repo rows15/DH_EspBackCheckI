@@ -1,4 +1,4 @@
-package com.dh.animal.dto;
+package com.dh.movie.dto;
 
 import lombok.Builder;
 import lombok.Data;
@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 @Data
 @Builder
-public class AnimalDTO implements Serializable {
+public class MovieDTO implements Serializable {
 
     private Long id;
     private String nome;

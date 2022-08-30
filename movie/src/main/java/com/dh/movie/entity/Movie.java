@@ -1,4 +1,4 @@
-package com.dh.animal.entity;
+package com.dh.movie.entity;
 
 import lombok.Data;
 
@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 @Data
 @Entity
-public class Animal implements Serializable {
+public class Movie implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
