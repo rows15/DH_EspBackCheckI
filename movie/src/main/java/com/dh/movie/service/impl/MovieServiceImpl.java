@@ -21,8 +21,9 @@ public class MovieServiceImpl implements MovieService {
     @Override
     public MovieDTO salvar(MovieDTO dto) {
         Movie entity = new Movie();
-        entity.setNome(dto.getNome());
+        entity.setName(dto.getName());
         entity.setIdEspecie(dto.getIdEspecie());
+        entity.setGenre(dto.getGenre());
         return entityToDTO(repository.save(entity));
     }
 
@@ -37,8 +38,9 @@ public class MovieServiceImpl implements MovieService {
     private MovieDTO entityToDTO(Movie movie) {
         return MovieDTO.builder()
                 .id(movie.getId())
-                .nome(movie.getNome())
+                .name(movie.getName())
                 .idEspecie(movie.getIdEspecie())
+                .genre((movie.getGenre()))
                 .build();
     }
 
