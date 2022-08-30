@@ -18,7 +18,7 @@ public class Movie implements Serializable {
 
     private String name;
 
-    private Long idEspecie;
+    private String  urlStream;
 
     private String genre;
 

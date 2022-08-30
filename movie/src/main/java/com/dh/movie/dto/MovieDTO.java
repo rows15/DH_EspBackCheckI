@@ -11,6 +11,6 @@ public class MovieDTO implements Serializable {
 
     private Long id;
     private String name;
-    private Long idEspecie;
+    private String urlStream;
     private String genre;
 }

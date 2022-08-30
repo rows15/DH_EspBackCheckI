@@ -8,11 +8,11 @@ public interface MovieService {
 
     MovieDTO salvar(MovieDTO dto);
 
-    List<MovieDTO> pesquisarPorIdEspecie(Long id);
 
-/*
-    List<MovieDTO> pesquisarPorStrGenero(String genre);
-*/
+
+
+    List<MovieDTO> pesquisarPorGenero(String genre);
+
 
 
 }

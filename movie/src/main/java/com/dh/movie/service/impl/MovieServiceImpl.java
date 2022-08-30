@@ -22,26 +22,22 @@ public class MovieServiceImpl implements MovieService {
     public MovieDTO salvar(MovieDTO dto) {
         Movie entity = new Movie();
         entity.setName(dto.getName());
-        entity.setIdEspecie(dto.getIdEspecie());
+        entity.setUrlStream(dto.getUrlStream());
         entity.setGenre(dto.getGenre());
         return entityToDTO(repository.save(entity));
     }
 
+
+
+
     @Override
-    public List<MovieDTO> pesquisarPorIdEspecie(Long id) {
-        return repository.findByIdEspecie(id)
+    public List<MovieDTO> pesquisarPorGenero(String genre) {
+        return repository.findByGenre(genre)
                 .stream()
                 .map(this::entityToDTO)
                 .collect(Collectors.toList());
     }
 
-   /* @Override
-    public List<MovieDTO> pesquisarPorStrGenero(String genre) {
-        return repository.findByStrGenre(genre)
-                .stream()
-                .map(this::entityToDTO)
-                .collect(Collectors.toList());
-    }*/
 
 
 
@@ -49,7 +45,7 @@ public class MovieServiceImpl implements MovieService {
         return MovieDTO.builder()
                 .id(movie.getId())
                 .name(movie.getName())
-                .idEspecie(movie.getIdEspecie())
+                .urlStream(movie.getUrlStream())
                 .genre((movie.getGenre()))
                 .build();
     }

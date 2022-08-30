@@ -22,14 +22,10 @@ public class MovieController {
         return ResponseEntity.status(HttpStatus.CREATED).body(service.salvar(dto));
     }
 
-    @GetMapping("/especie/{id}")
-    private ResponseEntity<List<MovieDTO>> pesquisarPorIdEspecie(@PathVariable Long id) {
-        return ResponseEntity.ok(service.pesquisarPorIdEspecie(id));
-    }
 
-  /*  @RequestMapping(value="/{genre}", method=RequestMethod.GET)
-    private ResponseEntity<List<MovieDTO>> pesquisarPorStrGenero(@PathVariable ("genre") String genre) {
-        return ResponseEntity.ok(service.pesquisarPorStrGenero(genre));
-    }*/
+    @RequestMapping(value="/{genre}", method=RequestMethod.GET)
+    private ResponseEntity<List<MovieDTO>> pesquisarPorGenero(@PathVariable ("genre") String genre) {
+        return ResponseEntity.ok(service.pesquisarPorGenero(genre));
+    }
 
 }
