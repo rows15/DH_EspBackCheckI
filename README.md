@@ -16,7 +16,7 @@ a) o endpoint em http://localhost:8080/movie/ usando POST e body
         "genre": "aventura"
     } 
 
-(obs: Por motivos desconhecidos é preciso tentar mandar o post para o '8080/movie' antes de mandar pro '8080/movie/')
+(obs: Por motivos desconhecidos as vezes é preciso tentar mandar o post para o '8080/movie' antes de mandar pro '8080/movie/')
 
 b) o console h2 em http://localhost:8080/movie/h2-console rodando o seguinte comando:
 INSERT INTO MOVIE VALUES(1,'acao','filmaoooo','http://oi')
