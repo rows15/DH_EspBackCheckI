@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    password:
+    url: jdbc:h2:mem:mydb
+    username: SA
+
+  application:
+    name: movie-service
+  config:
+    import: optional:configserver:http://localhost:8888/
+  cloud:
+    config:
+      profile: ${profile:dev}
+
