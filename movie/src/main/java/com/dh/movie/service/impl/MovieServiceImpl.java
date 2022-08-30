@@ -35,6 +35,16 @@ public class MovieServiceImpl implements MovieService {
                 .collect(Collectors.toList());
     }
 
+   /* @Override
+    public List<MovieDTO> pesquisarPorStrGenero(String genre) {
+        return repository.findByStrGenre(genre)
+                .stream()
+                .map(this::entityToDTO)
+                .collect(Collectors.toList());
+    }*/
+
+
+
     private MovieDTO entityToDTO(Movie movie) {
         return MovieDTO.builder()
                 .id(movie.getId())

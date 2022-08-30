@@ -10,4 +10,9 @@ public interface MovieService {
 
     List<MovieDTO> pesquisarPorIdEspecie(Long id);
 
+/*
+    List<MovieDTO> pesquisarPorStrGenero(String genre);
+*/
+
+
 }

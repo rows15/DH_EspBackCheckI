@@ -27,4 +27,9 @@ public class MovieController {
         return ResponseEntity.ok(service.pesquisarPorIdEspecie(id));
     }
 
+  /*  @RequestMapping(value="/{genre}", method=RequestMethod.GET)
+    private ResponseEntity<List<MovieDTO>> pesquisarPorStrGenero(@PathVariable ("genre") String genre) {
+        return ResponseEntity.ok(service.pesquisarPorStrGenero(genre));
+    }*/
+
 }
