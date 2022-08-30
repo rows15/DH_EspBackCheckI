@@ -11,15 +11,10 @@ import java.io.Serializable;
 @Data
 @Entity
 public class Movie implements Serializable {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String name;
-
     private String  urlStream;
-
     private String genre;
-
 }

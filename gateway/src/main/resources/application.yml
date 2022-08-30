@@ -8,6 +8,10 @@ spring:
       profile: ${profile:dev}
     gateway:
       routes:
+        - id: apicatalog
+          uri: lb://CATALOG-SERVICE
+          predicates:
+           - Path=/catalog/**
         - id: apimovie
           uri: lb://MOVIE-SERVICE
           predicates:

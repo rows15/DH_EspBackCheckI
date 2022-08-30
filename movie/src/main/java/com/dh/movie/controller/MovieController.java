@@ -16,16 +16,12 @@ public class MovieController {
 
     @Autowired
     private MovieService service;
-
     @PostMapping
     private ResponseEntity<MovieDTO> salvar(@RequestBody MovieDTO dto) {
         return ResponseEntity.status(HttpStatus.CREATED).body(service.salvar(dto));
     }
-
-
     @RequestMapping(value="/{genre}", method=RequestMethod.GET)
     private ResponseEntity<List<MovieDTO>> pesquisarPorGenero(@PathVariable ("genre") String genre) {
         return ResponseEntity.ok(service.pesquisarPorGenero(genre));
     }
-
 }
